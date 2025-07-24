@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/trailtrack
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: none  # Let Liquibase handle schema
+    database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
+
+  liquibase:
+    enabled: true
+#    change-log: classpath:db/changelog/test-simple.xml
+    change-log: classpath:db.changelog/db.changelog-master.xml
+#
+#    spring:
+#      liquibase:
+
+
+logging:
+  level:
+    liquibase: DEBUG
+#    org.springframework.boot.autoconfigure.liquibase: DEBUG
