@@ -1,0 +1,11 @@
+<changeSet id="1" author="jhogan">
+    <sql>CREATE EXTENSION IF NOT EXISTS postgis;</sql>
+    <createTable tableName="user">
+        <column name="id" type="UUID">
+            <constraints primaryKey="true"/>
+        </column>
+        <column name="username" type="VARCHAR(50)"/>
+        <column name="email" type="VARCHAR(100)"/>
+        <column name="date_joined" type="DATE"/>
+    </createTable>
+</changeSet>

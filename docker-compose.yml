@@ -1,0 +1,12 @@
+
+version: '3.8'
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: trailtrack-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: trailtrack
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres

@@ -1,0 +1,10 @@
+<changeSet id="2" author="jhogan">
+    <createTable tableName="trail">
+        <column name="id" type="UUID">
+            <constraints primaryKey="true"/>
+        </column>
+        <column name="name" type="VARCHAR(100)"/>
+        <column name="distance_km" type="DOUBLE PRECISION"/>
+        <column name="difficulty" type="VARCHAR(50)"/>
+    </createTable>
+</changeSet>
