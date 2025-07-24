@@ -1,0 +1,21 @@
+ <changeSet id="3" author="jhogan">
+    <createTable tableName="hike_record">
+        <column name="id" type="UUID">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+
+        <column name="user_id" type="UUID">
+            <constraints nullable="false" foreignKeyName="fk_hike_user"
+                         referencedTableName="user" referencedColumnNames="id"/>
+        </column>
+
+        <column name="trail_id" type="UUID">
+            <constraints nullable="false" foreignKeyName="fk_hike_trail"
+                         referencedTableName="trail" referencedColumnNames="id"/>
+        </column>
+
+        <column name="started_at" type="TIMESTAMP"/>
+        <column name="completed_at" type="TIMESTAMP"/>
+        <column name="total_distance" type="DOUBLE PRECISION"/>
+    </createTable>
+</changeSet>
